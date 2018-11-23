@@ -12,10 +12,11 @@ document.getElementById("reportButtons").childNodes.forEach(function(el){
 
 
 function doButtonClick(category){
-		reportCategory=category.trim();
+        category=category.trim();
+		reportCategory=category.replace("&gt;","").trim();
     document.getElementById("reportButtons").style.display="none";
     document.getElementById("meldingScherm").style.display="block";
-    document.getElementById("categoryName").innerHTML=category;
+    document.getElementById("categoryName").innerHTML=reportCategory;
 }
 
 function rijtuigChange(){

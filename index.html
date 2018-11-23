@@ -13,6 +13,31 @@
     <link rel="stylesheet" href="./CSS/fullindex.css">
     <link rel="stylesheet" href="./CSS/general.css">
 </head>
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+</style>
 
 <body>
 
@@ -32,32 +57,40 @@
                 Materiaaldeel :</div>
             <div><input type="text" name="materiaaldeel" id="materiaaldeel">
             </div>-->
-            <div>
 
                 <reportButtons id="reportButtons">
                   <button>
-                  Service
+                  Service  >
                   </button>
                   <button>
-                  Catering
+                  Catering  >
                   </button>
                   <button>
-                  SOS
+                  SOS  >
                   </button>
                 </reportButtons>
 
                 <table id="meldingScherm">
-                <tr><th colspan="2" id="categoryName"></th></tr>
+                <tr><th colspan="2" id="categoryName" class="categoryName" style="background:var(--test11);color:white;"></th></tr>
                 <tr>
-                  <th>Trein:</th>
+                  <th>Trein <div class="tooltip">(i)
+                      <span class="tooltiptext">Niet uw traject? pas het rijtuignummer aan naar uw rijtuig.</span>
+                  </div>:</th>
                   <td id="treinNaam"></td>
                 </tr>
                 <tr>
-                  <th>Rijtuignummer:</th>
+                  <th>Rijtuig nr. <div class="tooltip">(i)
+                      <span class="tooltiptext">Het rijtuignummer kunt u vinden boven de deur van de ingang van uw coupe op de wand</span>
+                  </div>:</th>
                   <td><input type="text" id="rijtuignummer" onchange="rijtuigChange()"/></td>
                 </tr>
                 <tr>
-                  <th>Locatie (bak):</th>
+                  <th>Locatie
+                      <div class="tooltip">(i)
+                          <span class="tooltiptext">het baknummer kunt u vinden naast het rijtuignummer boven de ingang van uw coupe</span>
+                      </div>
+                      :
+                  </th>
                   <td><input type="text" id="locatie"/></td>
                 </tr>
                 <tr>
@@ -70,7 +103,6 @@
                 </button></td>
                 </tr>
                 </table>
-            </div>
         </infocontainer>
     </maincontainer>
     <script>
