@@ -4,6 +4,7 @@ var table = document.getElementById("table");
 function fillTable(){
     // fill the table with messages from the panic button
     var messages = JSON.parse(window.localStorage.getItem("messages"))
+    messages.sort(function(a, b){return b.tijd - a.tijd});
     for (var i = 0; i < messages.length; i++){
         addMessage(messages[i])
     }
