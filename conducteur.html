@@ -7,14 +7,101 @@
         <script src="./JS/panic.js"></script>
         <script src="./JS/location.js"></script>
 
-    </head>
-    <body>
-    <h1> welkom NS </h1>
-    Ritnummer :<input type="text" name="trein" id="trein"><br>
-    Materiaaldeel :<input type="text" name="materiaaldeel" id="materiaaldeel">
-        <button onclick="panic()">PANIC!</button>
+        <h1> Conducteur meldingen </h1>
+        Calamiteitsmeldingen<br><br>
 
-    
+        <div class="container">
+            <div class="tab tab-1">
+                <table id="table" border="1">
+                    <tr>
+                        <th>Trein</th>
+                        <th>Bak</th>
+                        <th>Tijdstip</th>
+                        <th>Melding</th>
+                    </tr>
+                    <tr>
+                        <td>2254</td>
+                        <td>4</td>
+                        <td>18:42</td>
+                        <td>Iemand ligt op de grond te slapen</td>
+                    </tr>
+                    <tr>
+                        <td>2253</td>
+                        <td>1</td>
+                        <td>16:20</td>
+                        <td>Lawaai in de stiltecoupé</td>
+                    </tr>
+                        <td>2253</td>
+                        <td>4</td>
+                        <td>11:17</td>
+                        <td>Asociale dronken studenten</td>
+                    </tr>
+                </tr>
+
+                </table>
+            </div>
+            <br><br>Service verzoeken <br><br>
+            <div class="tab tab-2">
+                <table id="table" border="1">
+                    <tr>
+                        <th>Trein</th>
+                        <th>Bak</th>
+                        <th>Tijdstip</th>
+                        <th>Verzoek</th>
+                    </tr>
+                    <tr>
+                        <td>2253</td>
+                        <td>3</td>
+                        <td>17:35</td>
+                        <td>Welke trein is dit?!?</td>
+                    </tr>
+                    <tr>
+                        <td>2253</td>
+                        <td>2</td>
+                        <td>15:14</td>
+                        <td>Waardoor komt de vertraging?</td>
+                    </tr>
+                </tr>
+                    <td>2353</td>
+                    <td>7</td>
+                    <td>11:42</td>
+                    <td>Uitleg over het traject</td>
+                </tr>
+                    <td>2353</td>
+                    <td>1</td>
+                    <td>8:50</td>
+                    <td>Halverwege in de coupé is een zitplaats met een kapotte tray</td>
+                </tr>
+                </table>
+            </div>
+        </div>
+
+        <script>
+
+            // check the empty input
+            function checkEmptyInput()
+            {
+                var isEmpty = false,
+                    Trein = document.getElementById("Trein").value,
+                    Bak = document.getElementById("Bak").value,
+                    Tijdstip = document.getElementById("Tijdstip").value;
+
+                if(Trein === ""){
+                    alert("First Name Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Bak === ""){
+                    alert("Last Name Connot Be Empty");
+                    isEmpty = true;
+                }
+                else if(Tijdstip === ""){
+                    alert("Tijdstip Connot Be Empty");
+                    isEmpty = true;
+                }
+                return isEmpty;
+            }
+        fillTable()
+        </script>
 
 
     <script>
