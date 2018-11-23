@@ -49,6 +49,17 @@ h1 {
 }
 
 
+headcontainer h1{
+    margin-left: 16vmin;
+}
+
+headcontainer img{
+    /* margin-left: 25vw; */
+    margin-top: 3vmin;
+    margin-left: 2vmin;
+}
+
+
 test1 {
     background-color: var(--test1);
 }

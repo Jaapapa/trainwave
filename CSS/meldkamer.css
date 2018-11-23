@@ -21,10 +21,20 @@ headcontainer{
     grid-row: 0;
 }
 
-headcontainer p{
-    margin-left: 4vmin;
+headcontainer h1{
+    margin-left: 16vmin;
 }
 
+headcontainer p{
+    margin-left: 16vmin;
+}
+
+
+headcontainer img{
+    /* margin-left: 25vw; */
+    margin-top: 3vmin;
+    margin-left: 2vmin;
+}
 
 table {
     width: 100%;
