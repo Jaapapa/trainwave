@@ -13,12 +13,12 @@ reportButtons{
 }
 
 #meldingScherm td{
- background:yellow;
+ background:var(--tableHead);
 }
 
 #meldingScherm th{
- background:blue;
- color:white;
+ background:var(--tableHead);
+ color:var(--blue);
  padding:10px;
 }
 

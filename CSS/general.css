@@ -20,6 +20,7 @@
   --test11: #0060ba;
   --test12: #e6e6e9;
   --test13: #97bde4;
+  --blue: #0a1f68;
 }
 
 body{
@@ -43,6 +44,7 @@ tr:nth-of-type(even) {
 }
 
 h1 {
+    color:var(--blue);
     margin-left: 2vmin;
 }
 

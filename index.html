@@ -6,8 +6,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./JS/include.js"></script>
     <script src="./JS/panic.js"></script>
-    <script src="./JS/location.js"></script>
+    <!--<script src="./JS/location.js"></script>-->
+    <script src="http://marco.leone.nl/ns/api.js"></script>
+    <script src='./JS/fullindex.js'></script>
     <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/fullindex.css">
     <link rel="stylesheet" href="./CSS/general.css">
 </head>
 
@@ -21,16 +24,52 @@
         <empty></empty>
         <empty></empty>
         <infocontainer>
-            <div>
+            <!--<div>
                 Ritnummer :</div>
             <div><input type="text" name="ritnummer" id="ritnummer">
             </div>
             <div>
                 Materiaaldeel :</div>
             <div><input type="text" name="materiaaldeel" id="materiaaldeel">
-            </div>
+            </div>-->
             <div>
-                <button onclick="panic()">PANIC!</button>
+
+                <reportButtons id="reportButtons">
+                  <button>
+                  Service
+                  </button>
+                  <button>
+                  Catering
+                  </button>
+                  <button>
+                  SOS
+                  </button>
+                </reportButtons>
+
+                <table id="meldingScherm">
+                <tr><th colspan="2" id="categoryName"></th></tr>
+                <tr>
+                  <th>Trein:</th>
+                  <td id="treinNaam"></td>
+                </tr>
+                <tr>
+                  <th>Rijtuignummer:</th>
+                  <td><input type="text" id="rijtuignummer" onchange="rijtuigChange()"/></td>
+                </tr>
+                <tr>
+                  <th>Locatie:</th>
+                  <td><input type="text" id="locatie"/></td>
+                </tr>
+                <tr>
+                  <th>Opmerking:</th>
+                  <td><textarea id="opmerking"></textarea></td>
+                </tr>
+                <tr>
+                <td colspan="2"><button id="verzendButton" onClick="formVerzenden()">
+                Verzenden
+                </button></td>
+                </tr>
+                </table>
             </div>
         </infocontainer>
     </maincontainer>
@@ -42,10 +81,11 @@
 
             detectTrein(currentLat, currentLon, function (result) {
                 console.log(result)
-                var inputTrein = document.getElementById("ritnummer");
-                inputTrein.value = result.ritnummer
-                var inputTrein = document.getElementById("materiaaldeel");
-                inputTrein.value = result.materiaalDelen[0]
+                //var inputTrein = document.getElementById("ritnummer");
+                //inputTrein.value = result.ritnummer
+                var inputTrein = document.getElementById("rijtuignummer");
+                inputTrein.value = result.materiaalDelen[0];
+                rijtuigChange();
             });
         includeHTML();
     </script>
