@@ -29,12 +29,19 @@ function rijtuigChange(){
 }
 
 function formVerzenden(){
-	  var r={};
-    r.ritnummer=ritnummer;
-    r.soort=reportCategory;
-		r.rijtuignummer=parseInt(document.getElementById("rijtuignummer").value);
-    r.locatie=document.getElementById("locatie").value;
-    r.Opmerking=document.getElementById("opmerking").value;
+    var message = {}
+    message.ritnummer = document.getElementById("ritnummer").value,
+    message.materiaaldeel = document.getElementById("rijtuignummer").value,
+    message.bak = document.getElementById("locatie").value;
+    message.opmerking=document.getElementById("opmerking").value;
+    message.tijd = Math.round((new Date()).getTime() / 1000);
 
-    alert(JSON.stringify(r));
+    var messages = JSON.parse(window.localStorage.getItem('messages'));
+    if(!messages) {
+        messages = []
+    }
+    messages.push(message)
+    console.log("Nieuw bericht: materiaaldeel: " + message.materiaaldeel + " Tijd: " + message.tijd)
+    window.localStorage.setItem('messages', JSON.stringify(messages))
+    alert(JSON.stringify(messages))
 }
