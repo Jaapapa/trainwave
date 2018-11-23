@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="./JS/include.js"></script>
+    <script src="./JS/status.js"></script>
+    <script src="./JS/location.js"></script>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <link rel="stylesheet" href="./CSS/meldkamer.css">
+
+</head>
+
+<body>
+    <maincontainer>
+        <centercontainer>
+            <headcontainer>
+                <h1> Meldingen </h1>
+            </headcontainer>
+            <infocontainer>
+                Ritnummer: <input id="ritnummer" name="ritnummer" value="" onclick="fillTable()">
+                <button onclick="fillTable()">Tonen</button>
+                <div id="meldingenarea" class="container">
+                    <div class="tab tab-1">
+                        <table id="table" border="1">
+                            <thead>
+                                <th class="sort" data-sort="tijd">Tijd</th>
+                                <th class="sort" data-sort="beschrijving">Opmerkingen</th>
+                                <th> Status</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>23:12:18</td>
+                                    <td>Aso's in de coupe</td>
+                                    <td>Nieuw</td>
+                                </tr>
+                                <tr>
+                                    <td>23:10:42</td>
+                                    <td>Stinkend persoon</td>
+                                    <td>Nieuw</td>
+                                </tr>
+                                <tr>
+                                    <td>23:08:12</td>
+                                    <td>Persoon met fout kapsel</td>
+                                    <td>Nieuw</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </infocontainer>
+        </centercontainer>
+    </maincontainer>
+    <script>
+            // Huidige Positie stub (Utrecht)
+            var currentLon = 5.121420
+            var currentLat = 52.090736
+    
+                detectTrein(currentLat, currentLon, function (result) {
+                    console.log(result)
+                    var inputTrein = document.getElementById("ritnummer");
+                    inputTrein.value = result.ritnummer
+                    ritnummer = result.ritnummer
+                });
+            includeHTML();
+            fillTable();
+        </script>
+</body>
+
+</html>

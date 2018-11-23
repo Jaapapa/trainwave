@@ -12,5 +12,5 @@ function panic(messagetype, trainlocation){
     messages.push(message)
     console.log("Nieuw bericht: Trein: " + message.trein + " Tijd: " + message.tijd)
     window.localStorage.setItem('messages', JSON.stringify(messages))
-    alert(JSON.stringify(messages))
+    //alert(JSON.stringify(messages))
 }

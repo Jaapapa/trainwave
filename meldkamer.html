@@ -46,39 +46,7 @@
                     <th> Status</th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="id" style="display:none;">1</td>
-                        <td>2253</td>
-                        <td>4</td>
-                        <td>4</td>
-                        <td>23:12:18</td>
-                        <td>Aso's in de coupe</td>
-                        <td class="edit"><button class="edit-item-btn">To The Rescue!</button></td>
-                        <td class="remove"><button class="remove-item-btn">Remove</button></td>
-                        <td>Nieuw</td>
-                    </tr>
-                    <tr>
-                        <td class="id" style="display:none;">2</td>
-                        <td>4453</td>
-                        <td>1</td>
-                        <td>4</td>
-                        <td>23:10:42</td>
-                        <td>Stinkend persoon</td>
-                        <td class="edit"><button class="edit-item-btn">To The Rescue!</button></td>
-                        <td class="remove"><button class="remove-item-btn">Remove</button></td>
-                        <td>Nieuw</td>
-                    </tr>
-                    <tr>
-                        <td class="id" style="display:none;">3</td>
-                        <td>2353</td>
-                        <td>4</td>
-                        <td>4</td>
-                        <td>23:08:12</td>
-                        <td>Persoon met fout kapsel</td>
-                        <td class="edit"><button class="edit-item-btn">To The Rescue!</button></td>
-                        <td class="remove"><button class="remove-item-btn">Remove</button></td>
-                        <td>Nieuw</td>
-                    </tr>
+                   
                 </tbody>
             </table>
         </div>
@@ -111,6 +79,7 @@
             return isEmpty;
         }
         fillTable()
+        window.onblur= function() {window.onfocus= function () {location.reload(true)}};
     </script>
 </body>
 
