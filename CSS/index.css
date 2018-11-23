@@ -22,6 +22,6 @@ infocontainer {
     display: grid;
     padding: 4vmin;
     grid-row-gap: 2vmin;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
 }

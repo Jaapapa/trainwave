@@ -12,10 +12,11 @@ document.getElementById("reportButtons").childNodes.forEach(function(el){
 
 
 function doButtonClick(category){
-		reportCategory=category.trim();
+        category=category.trim();
+		reportCategory=category.replace("&gt;","").trim();
     document.getElementById("reportButtons").style.display="none";
     document.getElementById("meldingScherm").style.display="block";
-    document.getElementById("categoryName").innerHTML=category;
+    document.getElementById("categoryName").innerHTML=reportCategory;
 }
 
 function rijtuigChange(){
@@ -35,6 +36,7 @@ function formVerzenden(){
     message.bak = document.getElementById("locatie").value;
     message.opmerking=document.getElementById("opmerking").value;
     message.tijd = Math.round((new Date()).getTime() / 1000);
+    message.status = "Nieuw";
 
     var messages = JSON.parse(window.localStorage.getItem('messages'));
     if(!messages) {
