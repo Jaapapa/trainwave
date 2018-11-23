@@ -1,10 +1,12 @@
 maincontainer{
+    border-radius: 4vmin 4vmin 0 0;
     display: grid;
     grid-template-columns:1fr 7fr 1fr;
 
 }
 
 headcontainer{
+    border-radius: 4vmin 4vmin 0 0;
     background-color: var(--tableHead);
     grid-column: 0/1;
     grid-row: 0;
