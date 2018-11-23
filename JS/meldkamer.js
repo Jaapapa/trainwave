@@ -1,7 +1,5 @@
-
 var rIndex = document.getElementById("table");
 var table = document.getElementById("table");
-
 
 function fillTable(){
     // fill the table with messages from the panic button
@@ -10,7 +8,6 @@ function fillTable(){
     for (var i = 0; i < messages.length; i++){
         addMessage(messages[i])
     }
-
 }
 
 function addMessage(message){
@@ -20,55 +17,23 @@ function addMessage(message){
         cell1 = newRow.insertCell(0),
         cell2 = newRow.insertCell(1),
         cell3 = newRow.insertCell(2),
-        Trein = message.trein,
+        cell4 = newRow.insertCell(3),
+        cell5 = newRow.insertCell(4),
+        cell6 = newRow.insertCell(5),
+        cell7 = newRow.insertCell(6),
+        Rit = message.trein,
+        Materiaaldeel = message.materiaaldeel
         Tijdstip = message.tijd,
+        Opmerkingen = message.opmerkingen
         Bak = "5";
 
-    cell1.innerHTML = Trein;
-    cell2.innerHTML = Bak;
-    cell3.innerHTML = Tijdstip;
-
-}
-
-function addHtmlTableRow()
-{
-    // get the table by id
-    // create a new row and cells
-    // get value from input text
-    // set the values into row cell's
-
-    var rIndex = document.getElementById("table");
-    var table = document.getElementById("table");
-
-    if(!checkEmptyInput()){
-    var newRow = table.insertRow(table.length),
-        cell1 = newRow.insertCell(0),
-        cell2 = newRow.insertCell(1),
-        cell3 = newRow.insertCell(2),
-        Trein = document.getElementById("Trein").value,
-        Bak = document.getElementById("Bak").value,
-        Tijdstip = document.getElementById("Tijdstip").value;
-
-    cell1.innerHTML = Trein;
-    cell2.innerHTML = Bak;
-    cell3.innerHTML = Tijdstip;
-}
-}
-
-
-function editHtmlTbleSelectedRow()
-{
-    var rIndex = document.getElementById("table");
-    var table = document.getElementById("table");
-
-    var Trein = document.getElementById("Trein").value,
-        Bak = document.getElementById("Bak").value,
-        Tijdstip = document.getElementById("Tijdstip").value;
-   if(!checkEmptyInput()){
-    table.rows[rIndex].cells[0].innerHTML = Trein;
-    table.rows[rIndex].cells[1].innerHTML = Bak;
-    table.rows[rIndex].cells[2].innerHTML = Tijdstip;
-  }
+    cell1.innerHTML = Rit;
+    cell2.innerHTML = Materiaaldeel;
+    cell3.innerHTML = Bak;
+    cell4.innerHTML = Tijdstip;
+    cell5.innerHTML = Opmerkingen;
+    cell6.innerHTML = '<button>Edit</button>'
+    cell7.innerHTML = '<button>Remove</button>'
 }
 
 function removeSelectedRow()
