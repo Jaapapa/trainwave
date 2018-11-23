@@ -28,7 +28,7 @@ function addMessage(message){
         Rit = message.ritnummer,
         Materiaaldeel = message.materiaaldeel,
         Tijdstip = d.toLocaleTimeString('nl-NL'),
-        Opmerkingen = message.opmerkingen,
+        Opmerkingen = message.opmerking,
         Bak = "5",
         Status = message.status;
 
@@ -40,7 +40,7 @@ function addMessage(message){
     cell6.innerHTML = "<button>To The Rescue!</button>";
     // onclick={toTheRescue(" + Materiaaldeel + ")}
     cell6.onclick = function() { toTheRescue(Materiaaldeel); };
-    cell7.innerHTML = '<button>Remove</button>';
+    cell7.innerHTML = '<button>Vals Alarm</button>';
     cell8.innerHTML = Status;
 }
 
