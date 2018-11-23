@@ -4,12 +4,12 @@ function panic(messagetype, trainlocation){
     message.trein = document.getElementById("trein").value,
     message.tijd = Date()
 
-    var bla = JSON.parse(window.localStorage.getItem('messages'));
-    if(!bla) {
-        bla = []
+    var messages = JSON.parse(window.localStorage.getItem('messages'));
+    if(!messages) {
+        messages = []
     }
-    bla.push(message)
+    messages.push(message)
     console.log("Nieuw bericht: Trein: " + message.trein + " Tijd: " + message.tijd)
-    window.localStorage.setItem('messages', JSON.stringify(bla))
-    alert(bla)
+    window.localStorage.setItem('messages', JSON.stringify(messages))
+    alert(JSON.stringify(messages))
 }
