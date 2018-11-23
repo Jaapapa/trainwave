@@ -24,19 +24,24 @@ function addMessage(message){
         cell5 = newRow.insertCell(4),
         cell6 = newRow.insertCell(5),
         cell7 = newRow.insertCell(6),
+        cell8 = newRow.insertCell(7),
         Rit = message.ritnummer,
-        Materiaaldeel = message.materiaaldeel
+        Materiaaldeel = message.materiaaldeel,
         Tijdstip = d.toLocaleTimeString('nl-NL'),
-        Opmerkingen = message.opmerkingen
-        Bak = "5";
+        Opmerkingen = message.opmerkingen,
+        Bak = "5",
+        Status = message.status;
 
     cell1.innerHTML = Rit;
     cell2.innerHTML = Materiaaldeel;
     cell3.innerHTML = Bak;
     cell4.innerHTML = Tijdstip;
     cell5.innerHTML = Opmerkingen;
-    cell6.innerHTML = '<button>Edit</button>'
-    cell7.innerHTML = '<button>Remove</button>'
+    cell6.innerHTML = "<button>To The Rescue!</button>";
+    // onclick={toTheRescue(" + Materiaaldeel + ")}
+    cell6.onclick = function() { toTheRescue(Materiaaldeel); };
+    cell7.innerHTML = '<button>Remove</button>';
+    cell8.innerHTML = Status;
 }
 
 function removeSelectedRow()

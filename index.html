@@ -70,6 +70,8 @@
                   </button>
                 </reportButtons>
 
+                <input type="hidden" id="ritnummer" name="ritnummer" value="">
+
                 <table id="meldingScherm">
                 <tr><th colspan="2" id="categoryName" class="categoryName" style="background:var(--test11);color:white;"></th></tr>
                 <tr>
@@ -113,8 +115,8 @@
 
             detectTrein(currentLat, currentLon, function (result) {
                 console.log(result)
-                //var inputTrein = document.getElementById("ritnummer");
-                //inputTrein.value = result.ritnummer
+                var inputTrein = document.getElementById("ritnummer");
+                inputTrein.value = result.ritnummer
                 var inputTrein = document.getElementById("rijtuignummer");
                 inputTrein.value = result.materiaalDelen[0];
                 rijtuigChange();
