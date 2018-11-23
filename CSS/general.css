@@ -24,7 +24,7 @@
 }
 
 body{
-    background-color: var(--lightBG);
+    background-image: url("./images/paper.gif");
 }
 
 table {
