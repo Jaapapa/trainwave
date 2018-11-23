@@ -35,6 +35,7 @@ function formVerzenden(){
     message.bak = document.getElementById("locatie").value;
     message.opmerking=document.getElementById("opmerking").value;
     message.tijd = Math.round((new Date()).getTime() / 1000);
+    message.status = "Nieuw";
 
     var messages = JSON.parse(window.localStorage.getItem('messages'));
     if(!messages) {
