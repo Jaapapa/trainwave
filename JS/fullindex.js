@@ -45,5 +45,5 @@ function formVerzenden(){
     messages.push(message)
     console.log("Nieuw bericht: materiaaldeel: " + message.materiaaldeel + " Tijd: " + message.tijd)
     window.localStorage.setItem('messages', JSON.stringify(messages))
-    alert(JSON.stringify(messages))
+    //alert(JSON.stringify(messages))
 }
