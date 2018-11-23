@@ -83,8 +83,8 @@
 
             detectTrein(currentLat, currentLon, function (result) {
                 console.log(result)
-                //var inputTrein = document.getElementById("ritnummer");
-                //inputTrein.value = result.ritnummer
+                var inputTrein = document.getElementById("ritnummer");
+                inputTrein.value = result.ritnummer
                 var inputTrein = document.getElementById("rijtuignummer");
                 inputTrein.value = result.materiaalDelen[0];
                 rijtuigChange();
