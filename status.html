@@ -31,21 +31,7 @@
                                 <th> Status</th>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>23:12:18</td>
-                                    <td>Aso's in de coupe</td>
-                                    <td>Nieuw</td>
-                                </tr>
-                                <tr>
-                                    <td>23:10:42</td>
-                                    <td>Stinkend persoon</td>
-                                    <td>Nieuw</td>
-                                </tr>
-                                <tr>
-                                    <td>23:08:12</td>
-                                    <td>Persoon met fout kapsel</td>
-                                    <td>Nieuw</td>
-                                </tr>
+                                
                             </tbody>
                         </table>
                     </div>
@@ -54,19 +40,20 @@
         </centercontainer>
     </maincontainer>
     <script>
-            // Huidige Positie stub (Utrecht)
-            var currentLon = 5.121420
-            var currentLat = 52.090736
-    
-                detectTrein(currentLat, currentLon, function (result) {
-                    console.log(result)
-                    var inputTrein = document.getElementById("ritnummer");
-                    inputTrein.value = result.ritnummer
-                    ritnummer = result.ritnummer
-                });
-            includeHTML();
+        // Huidige Positie stub (Utrecht)
+        var currentLon = 5.121420
+        var currentLat = 52.090736
+
+        detectTrein(currentLat, currentLon, function (result) {
+            console.log(result)
+            var inputTrein = document.getElementById("ritnummer");
+            inputTrein.value = result.ritnummer
+            ritnummer = result.ritnummer
             fillTable();
-        </script>
+        });
+        includeHTML();
+        
+    </script>
 </body>
 
 </html>
