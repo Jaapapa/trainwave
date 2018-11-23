@@ -21,7 +21,7 @@ function addMessage(message){
         cell5 = newRow.insertCell(4),
         cell6 = newRow.insertCell(5),
         cell7 = newRow.insertCell(6),
-        Rit = message.trein,
+        Rit = message.ritnummer,
         Materiaaldeel = message.materiaaldeel
         Tijdstip = message.tijd,
         Opmerkingen = message.opmerkingen

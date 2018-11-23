@@ -1,7 +1,8 @@
 
 function panic(messagetype, trainlocation){
     message = {}
-    message.trein = document.getElementById("trein").value,
+    message.ritnummer = document.getElementById("ritnummer").value,
+    message.materiaaldeel = document.getElementById("materiaaldeel").value,
     message.tijd = Date()
 
     var messages = JSON.parse(window.localStorage.getItem('messages'));

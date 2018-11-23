@@ -10,7 +10,7 @@
     </head>
     <body>
     <h1> welkom NS </h1>
-    Ritnummer :<input type="text" name="trein" id="trein"><br>
+    Ritnummer :<input type="text" name="ritnummer" id="ritnummer"><br>
     Materiaaldeel :<input type="text" name="materiaaldeel" id="materiaaldeel">
         <button onclick="panic()">PANIC!</button>
 
@@ -22,7 +22,7 @@
 
     detectTrein(currentLat,currentLon,function(result){
         console.log(result)
-        var inputTrein = document.getElementById("trein");
+        var inputTrein = document.getElementById("ritnummer");
         inputTrein.value = result.ritnummer
         var inputTrein = document.getElementById("materiaaldeel");
         inputTrein.value = result.materiaalDelen[0]
