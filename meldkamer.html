@@ -8,10 +8,27 @@
     <script src="./JS/include.js"></script>
     <script src="./JS/list.min.js"></script>
     <script src="./JS/meldkamer.js"></script>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <link rel="stylesheet" href="./CSS/meldkamer.css">
+
 </head>
 
 <body>
-    <h1> Meldkamer meldingen </h1>
+    <maincontainer>
+    <headcontainer>
+        <h1> Meldkamer meldingen </h1>
+    </headcontainer>
+    <infocontainer>
+        <div class="tab tab-2">
+            Trein :<input type="text" name="Trein" id="Trein">
+            Bak :<input type="text" name="Bak" id="Bak">
+            Tijdstip :<input type="number" name="Tijdstip" id="Tijdstip">
+
+            <button id="add-btn">Add</button>
+            <button id="edit-btn">Edit</button>
+            <button id="remove-btn">Remove</button>
+        </div>
+
     <div id="meldingenarea" class="container">
         <div class="tab tab-1">
             <table id="table" border="1">
@@ -60,6 +77,9 @@
             </table>
         </div>
     </div>
+</infocontainer>
+
+</maincontainer>
 
     <script>
 
