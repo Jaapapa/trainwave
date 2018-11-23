@@ -1,0 +1,36 @@
+#reportButtons {
+  height:50px;
+  width:30%;
+}
+
+reportButtons{
+  text-align:center;
+}
+
+#meldingScherm{
+  display:none;
+  border:0px;
+}
+
+#meldingScherm td{
+ background:yellow;
+}
+
+#meldingScherm th{
+ background:blue;
+ color:white;
+ padding:10px;
+}
+
+input, textarea{
+  width:400px;
+}
+
+textarea{
+  height:100px;
+}
+
+#verzendButton{
+  height:50px;
+  width:100%;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./CSS/fullindex.css">
+        <link rel="stylesheet" href="./CSS/index.css">
+        <link rel="stylesheet" href="./CSS/general.css">
+
+        <script src='./JS/fullindex.js'></script>
+    </head>
+    <body>
+
+
+<reportButtons id="reportButtons">
+  <button>
+  Service
+  </button>
+  <button>
+  Catering
+  </button>
+  <button>
+  SOS
+  </button>
+</reportButtons>
+
+<table id="meldingScherm">
+<tr><th colspan="2" id="categoryName"></th></tr>
+<tr>
+  <th>Trein:</th>
+  <td id="treinNaam"></td>
+</tr>
+<tr>
+  <th>Rijtuignummer:</th>
+  <td><input type="text" id="rijtuignummer" onchange="rijtuigChange()"/></td>
+</tr>
+<tr>
+  <th>Locatie:</th>
+  <td><input type="text" id="locatie"/></td>
+</tr>
+<tr>
+  <th>Opmerking:</th>
+  <td><textarea id="opmerking"></textarea></td>
+</tr>
+<tr>
+<td colspan="2"><button id="verzendButton" onClick="formVerzenden()">
+Verzenden
+</button></td>
+</tr>
+</table>
+</body>
+
+</html>
