@@ -1,47 +1,54 @@
 <!DOCTYPE html>
-<html >
-    <head>
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="./JS/include.js"></script>
-        <script src="./JS/panic.js"></script>
-        <script src="./JS/location.js"></script>
-        <link rel="stylesheet" href="./CSS/index.css">
-        <link rel="stylesheet" href="./CSS/general.css">
-    </head>
-    <body>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./JS/include.js"></script>
+    <script src="./JS/panic.js"></script>
+    <script src="./JS/location.js"></script>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/general.css">
+</head>
+
+<body>
+
     <maincontainer>
-    <empty></empty>
-    <headcontainer><h1> welkom NS </h1></headcontainer>
-    <empty></empty>
-    <empty></empty>
-    <infocontainer>
-        <div>
-            Ritnummer :</div><div><input type="text" name="trein" id="trein">
-        </div>
-        <div>
-            Materiaaldeel :</div><div><input type="text" name="materiaaldeel" id="materiaaldeel">
-        </div>
-        <div>
-            <button onclick="panic()">PANIC!</button>
-        </div>
-    </infocontainer>
+        <empty></empty>
+        <headcontainer>
+            <h1> welkom NS </h1>
+        </headcontainer>
+        <empty></empty>
+        <empty></empty>
+        <infocontainer>
+            <div>
+                Ritnummer :</div>
+            <div><input type="text" name="ritnummer" id="ritnummer">
+            </div>
+            <div>
+                Materiaaldeel :</div>
+            <div><input type="text" name="materiaaldeel" id="materiaaldeel">
+            </div>
+            <div>
+                <button onclick="panic()">PANIC!</button>
+            </div>
+        </infocontainer>
     </maincontainer>
     <script>
-    // Huidige Positie stub (Utrecht)
-    var currentLon = 5.121420
-    var currentLat = 52.090736
-    var currentTreinData =
+        // Huidige Positie stub (Utrecht)
+        var currentLon = 5.121420
+        var currentLat = 52.090736
+        var currentTreinData =
 
-    detectTrein(currentLat,currentLon,function(result){
-        console.log(result)
-        var inputTrein = document.getElementById("trein");
-        inputTrein.value = result.ritnummer
-        var inputTrein = document.getElementById("materiaaldeel");
-        inputTrein.value = result.materiaalDelen[0]
-    });
-    includeHTML();
+            detectTrein(currentLat, currentLon, function (result) {
+                console.log(result)
+                var inputTrein = document.getElementById("ritnummer");
+                inputTrein.value = result.ritnummer
+                var inputTrein = document.getElementById("materiaaldeel");
+                inputTrein.value = result.materiaalDelen[0]
+            });
+        includeHTML();
     </script>
-    </body>
+</body>
 
 </html>
