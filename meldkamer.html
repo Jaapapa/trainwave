@@ -4,36 +4,59 @@
 <head>
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     <script src="./JS/include.js"></script>
-
+    <script src="./JS/list.min.js"></script>
     <script src="./JS/meldkamer.js"></script>
-
 </head>
 
 <body>
     <h1> Meldkamer meldingen </h1>
-    <div class="container">
+    <div id="meldingenarea" class="container">
         <div class="tab tab-1">
             <table id="table" border="1">
-                <tr>
-                    <th>Trein</th>
-                    <th>Bak</th>
-                    <th>Tijdstip</th>
-                </tr>
-                <tr>
-                    <td>2253</td>
-                    <td>4</td>
-                    <td>12:42</td>
-                </tr>
-                <tr>
-                    <td>4453</td>
-                    <td>1</td>
-                    <td>2:42</td>
-                </tr>
-                    <td>2353</td>
-                    <td>4</td>
-                    <td>11:42</td>
-                </tr>
+                <thead>
+                    <th class="sort" data-sort="rit">Rit</th>
+                    <th class="sort" data-sort="materiaaldeel">MateriaalDeel</th>
+                    <th class="sort" data-sort="bak">Bak</th>
+                    <th class="sort" data-sort="tijd">Tijd</th>
+                    <th class="sort" data-sort="beschrijving">Opmerkingen</th>
+                    <th colspan="2">
+                        <input type="text" class="search" placeholder="Zoek melding" />
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="id" style="display:none;">1</td>
+                        <td>2253</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>12:42</td>
+                        <td>Aso's in de coupe</td>
+                        <td class="edit"><button class="edit-item-btn">Edit</button></td>
+                        <td class="remove"><button class="remove-item-btn">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td class="id" style="display:none;">2</td>
+                        <td>4453</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>2:42</td>
+                        <td>Stinkend persoon</td>
+                        <td class="edit"><button class="edit-item-btn">Edit</button></td>
+                        <td class="remove"><button class="remove-item-btn">Remove</button></td>
+                    </tr>
+                    <tr>
+                        <td class="id" style="display:none;">3</td>
+                        <td>2353</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>11:42</td>
+                        <td>Persoon met fout kapsel</td>
+                        <td class="edit"><button class="edit-item-btn">Edit</button></td>
+                        <td class="remove"><button class="remove-item-btn">Remove</button></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
         <div class="tab tab-2">
@@ -41,37 +64,36 @@
             Bak :<input type="text" name="Bak" id="Bak">
             Tijdstip :<input type="number" name="Tijdstip" id="Tijdstip">
 
-            <button onclick="addHtmlTableRow();">Add</button>
-            <button onclick="editHtmlTbleSelectedRow();">Edit</button>
-            <button onclick="removeSelectedRow();">Remove</button>
+            <button id="add-btn">Add</button>
+            <button id="edit-btn">Edit</button>
+            <button id="remove-btn">Remove</button>
         </div>
     </div>
 
     <script>
 
         // check the empty input
-        function checkEmptyInput()
-        {
+        function checkEmptyInput() {
             var isEmpty = false,
                 Trein = document.getElementById("Trein").value,
                 Bak = document.getElementById("Bak").value,
                 Tijdstip = document.getElementById("Tijdstip").value;
 
-            if(Trein === ""){
+            if (Trein === "") {
                 alert("First Name Connot Be Empty");
                 isEmpty = true;
             }
-            else if(Bak === ""){
+            else if (Bak === "") {
                 alert("Last Name Connot Be Empty");
                 isEmpty = true;
             }
-            else if(Tijdstip === ""){
+            else if (Tijdstip === "") {
                 alert("Tijdstip Connot Be Empty");
                 isEmpty = true;
             }
             return isEmpty;
         }
-    fillTable()
+        fillTable()
     </script>
 </body>
 
