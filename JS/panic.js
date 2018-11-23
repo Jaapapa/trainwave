@@ -1,4 +1,6 @@
 
 
 
-function panic(messagetype, trainlocation)
+function panic(messagetype, trainlocation){
+    alert("works")
+}
