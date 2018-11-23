@@ -6,19 +6,32 @@
         <script src="./JS/include.js"></script>
         <script src="./JS/panic.js"></script>
         <script src="./JS/location.js"></script>
-
+        <link rel="stylesheet" href="./CSS/index.css">
+        <link rel="stylesheet" href="./CSS/general.css">
     </head>
     <body>
-    <h1> welkom NS </h1>
-    Ritnummer :<input type="text" name="trein" id="trein"><br>
-    Materiaaldeel :<input type="text" name="materiaaldeel" id="materiaaldeel">
-        <button onclick="panic()">PANIC!</button>
-
+    <maincontainer>
+    <empty></empty>
+    <headcontainer><h1> welkom NS </h1></headcontainer>
+    <empty></empty>
+    <empty></empty>
+    <infocontainer>
+        <div>
+            Ritnummer :</div><div><input type="text" name="trein" id="trein">
+        </div>
+        <div>
+            Materiaaldeel :</div><div><input type="text" name="materiaaldeel" id="materiaaldeel">
+        </div>
+        <div>
+            <button onclick="panic()">PANIC!</button>
+        </div>
+    </infocontainer>
+    </maincontainer>
     <script>
     // Huidige Positie stub (Utrecht)
     var currentLon = 5.121420
     var currentLat = 52.090736
-    var currentTreinData = 
+    var currentTreinData =
 
     detectTrein(currentLat,currentLon,function(result){
         console.log(result)
