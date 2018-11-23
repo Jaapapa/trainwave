@@ -3,7 +3,6 @@ var table = document.getElementById("table");
 
 function fillTable(){
     // fill the table with messages from the panic button
-    var table = document.getElementById("table");
     var messages = JSON.parse(window.localStorage.getItem("messages"))
     for (var i = 0; i < messages.length; i++){
         addMessage(messages[i])
