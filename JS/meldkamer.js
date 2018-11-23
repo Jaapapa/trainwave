@@ -13,6 +13,9 @@ function fillTable(){
 function addMessage(message){
     var table = document.getElementById("table");
 
+    var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+    d.setUTCSeconds(message.tijd);
+
     var newRow = table.insertRow(table.length),
         cell1 = newRow.insertCell(0),
         cell2 = newRow.insertCell(1),
@@ -23,7 +26,7 @@ function addMessage(message){
         cell7 = newRow.insertCell(6),
         Rit = message.ritnummer,
         Materiaaldeel = message.materiaaldeel
-        Tijdstip = message.tijd,
+        Tijdstip = d.toLocaleTimeString('nl-NL'),
         Opmerkingen = message.opmerkingen
         Bak = "5";
 
