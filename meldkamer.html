@@ -5,37 +5,19 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./JS/include.js"></script>
-
     <script src="./JS/meldkamer.js"></script>
+    <link rel="stylesheet" href="./CSS/general.css">
+    <link rel="stylesheet" href="./CSS/meldkamer.css">
 
 </head>
 
 <body>
-    <h1> Meldkamer meldingen </h1>
+    <maincontainer>
+    <headcontainer>
+        <h1> Meldkamer meldingen </h1>
+    </headcontainer>
+    <infocontainer>
     <div class="container">
-        <div class="tab tab-1">
-            <table id="table" border="1">
-                <tr>
-                    <th>Trein</th>
-                    <th>Bak</th>
-                    <th>Tijdstip</th>
-                </tr>
-                <tr>
-                    <td>2253</td>
-                    <td>4</td>
-                    <td>12:42</td>
-                </tr>
-                <tr>
-                    <td>4453</td>
-                    <td>1</td>
-                    <td>2:42</td>
-                </tr>
-                    <td>2353</td>
-                    <td>4</td>
-                    <td>11:42</td>
-                </tr>
-            </table>
-        </div>
         <div class="tab tab-2">
             Trein :<input type="text" name="Trein" id="Trein">
             Bak :<input type="text" name="Bak" id="Bak">
@@ -45,7 +27,20 @@
             <button onclick="editHtmlTbleSelectedRow();">Edit</button>
             <button onclick="removeSelectedRow();">Remove</button>
         </div>
+
+        <div class="tab tab-1">
+            <table id="table" border="1">
+                <tr>
+                    <th>Trein</th>
+                    <th>Bak</th>
+                    <th>Tijdstip</th>
+                </tr>
+            </table>
+        </div>
     </div>
+</infocontainer>
+
+</maincontainer>
 
     <script>
 
