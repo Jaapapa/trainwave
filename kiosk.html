@@ -9,10 +9,74 @@
 
     </head>
     <body>
-    <h1> welkom NS </h1>
-    Ritnummer :<input type="text" name="trein" id="trein"><br>
-    Materiaaldeel :<input type="text" name="materiaaldeel" id="materiaaldeel">
-        <button onclick="panic()">PANIC!</button>
+    <h1> Kiosk Railcatering </h1>
+    In uw huidige traject is er vraag naar:<br><br>
+
+    <div class="container">
+        <div class="tab tab-1">
+            <table id="table" border="1">
+                <tr>
+                    <th>Trein</th>
+                    <th>Bak</th>
+                    <th>Tijdstip</th>
+                    <th>Vraag</th>
+                </tr>
+                <tr>
+                    <td>2253</td>
+                    <td>4</td>
+                    <td>12:42</td>
+                    <td>Koffie, Mars</td>
+                </tr>
+                <tr>
+                    <td>4453</td>
+                    <td>1</td>
+                    <td>2:42</td>
+                    <td>Chocolademelk</td>
+                </tr>
+                    <td>2353</td>
+                    <td>4</td>
+                    <td>11:42</td>
+                    <td>Thee</td>
+                </tr>
+            </tr>
+                <td>2353</td>
+                <td>3</td>
+                <td>11:42</td>
+                <td>Bounty</td>
+            </tr>
+            </table>
+        </div>
+        <div class="tab tab-2">
+
+        </div>
+    </div>
+
+    <script>
+
+        // check the empty input
+        function checkEmptyInput()
+        {
+            var isEmpty = false,
+                Trein = document.getElementById("Trein").value,
+                Bak = document.getElementById("Bak").value,
+                Tijdstip = document.getElementById("Tijdstip").value;
+
+            if(Trein === ""){
+                alert("First Name Connot Be Empty");
+                isEmpty = true;
+            }
+            else if(Bak === ""){
+                alert("Last Name Connot Be Empty");
+                isEmpty = true;
+            }
+            else if(Tijdstip === ""){
+                alert("Tijdstip Connot Be Empty");
+                isEmpty = true;
+            }
+            return isEmpty;
+        }
+    fillTable()
+    </script>
 
     <script>
     // Huidige Positie stub (Utrecht)
